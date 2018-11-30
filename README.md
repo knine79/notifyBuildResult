@@ -20,7 +20,7 @@ Push notification from xcode on build complete using Pushbullet
  * Open `access-token` file and write down your access token instead of "<your_access_token_here>".
 
 * Press shortcut key you specified to custom behavior in Xcode. You will see:
-
+![Screenshot](https://raw.github.com/knine79/notifyBuildResult/master/notifyBuildResult.png)
  * You can choose:
   * `Notify` to receive notifications of all build result since now.
   * `Notify Once` to receive notifications of build result until build succeeded once.
