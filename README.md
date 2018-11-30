@@ -1,21 +1,29 @@
-# buildComplete
+# notifyBuildResult
 Push notification from xcode on build complete using Pushbullet
 
 #### Usage:
 
-* Download the two scripts in the repo
-* Give the scripts execute permissions (`chmod a+x script`)
+* Clone repository into your project root. (Let 'notifyBuildResult' directory be in your project root.)
+* Give all the scripts execute permissions (`chmod a+x script`).
 * In Xcode, go to Preferences -> Behaviors. 
- * Under Build -> Start, add `build_time_start.sh` to Run  
- * Under Build -> Succeeds add `end_time_script.sh` to Run
+ * Under Build -> Start, add `build-start.sh` to Run.
+ * Under Build -> Succeeds add `build-succeeded.sh` to Run.
+ * Under Build -> Fails add `build-failed.sh` to Run.
+ * Press + button on the left bottom to create new behavior under Custom.
+  * Name it 'Notify Build Result' (or anything).
+  * Specify shortcut to anthing you want.
+  * Add `notifyBuildResult.sh` to Run.
     
-* Download the PushBullet app (https://www.pushbullet.com/apps) 
- * Create an account 
- * Under my account on the website create access token
- * Add `export PUSHBULLET_ACCESS_TOKEN="<your_access_token_here>"` to your bash profile
+* Download the PushBullet app (https://www.pushbullet.com/apps).
+ * Create an account.
+ * Under my account on the website create access token.
+ * Open `access-token` file and write down your access token instead of "<your_access_token_here>".
 
-* Enjoy your leisure compile time (https://xkcd.com/303/)
+* Press shortcut key you specified to custom behavior in Xcode. You will see:
+
+ * You can choose:
+  * `Notify` to receive notifications of all build result since now.
+  * `Notify Once` to receive notifications of build result until build succeeded once.
+  * `Don't Notify` not to receive notifications no longer.
   
-  
-##### Notes:  
-The script sends a notification if the build time was over 10 minutes. You can change this time in the script to suit your needs.
+* Enjoy your leisure compile time
