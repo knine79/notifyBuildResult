@@ -3,22 +3,22 @@ Push notification from Xcode on build complete using PushBullet app.
 
 #### Usage:
 
-* Clone repository into your project root. (Let `notifyBuildResult` directory be in your project root.)
-* Give all the scripts execute permissions (`chmod a+x script`).
+* Download the PushBullet app (https://www.pushbullet.com/apps).
+  * Create an account.
+  * Under my account on the website, create access token.
+
+* Clone this repository.
+  * Save access token with `config.sh <your-pushbullet-access-token>` command.
+  
 * In Xcode, go to Preferences -> Behaviors. 
   * Under Build -> Start, add `build-start.sh` to Run.
   * Under Build -> Succeeds, add `build-succeeded.sh` to Run.
   * Under Build -> Fails, add `build-failed.sh` to Run.
   * Press '+' button on the left bottom to create new behavior under Custom.
-  * Name it 'Notify Build Result' (or anything).
-  * Specify shortcut to anthing you want.
+  * Name it anything you want. (e.g.) `Notify Build Result`
+  * Specify shortcut to anthing you want. (e.g.) `Shift+Ctrl+Option+Cmd+N`
   * Add `notifyBuildResult.sh` to Run.
     
-* Download the PushBullet app (https://www.pushbullet.com/apps).
-  * Create an account.
-  * Under my account on the website, create access token.
-  * Open `access-token` file and write down your access token instead of `<your_access_token_here>`.
-
 * Press shortcut key you specified to custom behavior in Xcode. You will see:
   ![Screenshot](https://raw.github.com/knine79/notifyBuildResult/master/notifyBuildResult.png)
   * You can choose:
