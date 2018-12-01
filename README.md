@@ -5,7 +5,7 @@ Push notification from Xcode on build complete using PushBullet app.
 
 * Download the PushBullet app (https://www.pushbullet.com/apps).
   * Create an account.
-  * Under my account on the website, create access token.
+  * Under my account on the website, create access token (https://www.pushbullet.com/#settings/account).
 
 * Clone this repository.
   * Save access token with `config.sh <your-pushbullet-access-token>` command.
