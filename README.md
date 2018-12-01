@@ -2,7 +2,7 @@
 Push notification from Xcode on build complete using PushBullet app.
 
 Aren't you boring to wait computer while compiling Swift code?
-My project will helpful. You can enjoy your leisure compile time.
+My project will helpful. Now you can enjoy your leisure compile time.
 
 ![GetBackToWork](https://imgs.xkcd.com/comics/compiling.png)
 
