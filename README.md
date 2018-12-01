@@ -27,3 +27,8 @@ Push notification from Xcode on build complete using PushBullet app.
     * `Don't Notify` not to receive notifications no longer.
   
 * Enjoy your leisure compile time
+
+#### Clean Removal
+
+* Remove `/tmp/NotifyBuildResult/` directory.
+* Remove cloned repository.
