@@ -1,11 +1,11 @@
 #!/bin/bash
-NOTIFY=$(cat /opt/NotifyBuildResult/notify)
-PUSHBULLET_ACCESS_TOKEN=$(cat /opt/PushBullet/access-token)
-START=$(cat /opt/NotifyBuildResult/start-time)
+NOTIFY=$(cat /tmp/NotifyBuildResult/notify)
+PUSHBULLET_ACCESS_TOKEN=$(cat /tmp/NotifyBuildResult/access-token)
+START=$(cat /tmp/NotifyBuildResult/start-time)
 END=$(date +%s)
 TOTAL=$(echo "($END - $START) / 60" | bc)
 
-rm /opt/NotifyBuildResult/start-time
+rm /tmp/NotifyBuildResult/start-time
 if [ "$NOTIFY" != "off" ]; then
 	curl --header "Access-Token: $PUSHBULLET_ACCESS_TOKEN" \
     --header 'Content-Type: application/json' \
@@ -14,6 +14,6 @@ if [ "$NOTIFY" != "off" ]; then
     https://api.pushbullet.com/v2/pushes
 
 	if [ "$NOTIFY" == "once" ]; then
-		echo off > /opt/NotifyBuildResult/notify
+		echo off > /tmp/NotifyBuildResult/notify
 	fi
 fi

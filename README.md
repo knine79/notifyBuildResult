@@ -35,5 +35,5 @@ My project will helpful. Now you can enjoy your leisure compile time.
 
 #### Clean Removal
 
-* Remove `/opt/NotifyBuildResult/` directory.
+* Remove `/tmp/NotifyBuildResult/` directory.
 * Remove cloned repository.

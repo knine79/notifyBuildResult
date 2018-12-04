@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(date +%s) > /opt/NotifyBuildResult/start-time
+echo $(date +%s) > /tmp/NotifyBuildResult/start-time
