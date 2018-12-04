@@ -1,14 +1,14 @@
 #!/bin/bash
-if [ ! -f /tmp/NotifyBuildResult/notify ]; then
-	mkdir -p /tmp/NotifyBuildResult/
-	echo off > /tmp/NotifyBuildResult/notify
+if [ ! -f /opt/NotifyBuildResult/notify ]; then
+	mkdir -p /opt/NotifyBuildResult/
+	echo off > /opt/NotifyBuildResult/notify
 fi
 if [ -e $1 ]; then
-	if [ ! -f /tmp/NotifyBuildResult/access-token ]; then
+	if [ ! -f /opt/PushBullet/access-token ]; then
 		echo "PushBullet access token needed."
 		echo "You can obtain it https://www.pushbullet.com/#settings/account."
 	fi
 else
-	echo $1 > /tmp/NotifyBuildResult/access-token
+	echo $1 > /opt/PushBullet/access-token
 fi
 
