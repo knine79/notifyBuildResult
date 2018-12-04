@@ -36,4 +36,5 @@ My project will helpful. Now you can enjoy your leisure compile time.
 #### Clean Removal
 
 * Remove `/usr/local/etc/NotifyBuildResult/` directory.
+* Remove `/usr/local/etc/PushBullet/` directory.
 * Remove cloned repository.
