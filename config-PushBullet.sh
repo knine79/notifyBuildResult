@@ -15,3 +15,5 @@ else
 	echo $1 > /usr/local/etc/PushBulllet/access-token
 fi
 
+ln -sf send-by-PushBullet.sh sendMessage
+chmod +x sendMessage
