@@ -1,1 +1,3 @@
-./completed.sh "👎 빌드 실패"
+#!/bin/bash
+BASEDIR=$(dirname "$0")
+$BASEDIR/completed.sh "👎 빌드 실패"

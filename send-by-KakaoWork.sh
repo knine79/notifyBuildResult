@@ -1,3 +1,4 @@
+#!/bin/bash
 WEBHOOK_URL=$(cat /usr/local/etc/KakaoWork/incoming-webhook-url)
 
 curl -X POST "$WEBHOOK_URL" -H "Content-Type: application/json" -d '{
