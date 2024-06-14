@@ -6,15 +6,23 @@ My project will helpful. Now you can enjoy your leisure compile time.
 
 ![GetBackToWork](https://imgs.xkcd.com/comics/compiling.png)
 
-#### Usage:
+## Usage:
 
+### Messanger Setting
+#### PushBullet
 * Download the PushBullet app (https://www.pushbullet.com/apps).
   * Create an account.
   * Under my account on the website, create access token (https://www.pushbullet.com/#settings/account).
 
 * Clone this repository.
-  * Save access token with `config.sh <your-pushbullet-access-token>` command.
-  
+  * Save access token with `config-PushBullet.sh <your-pushbullet-access-token>` command.
+
+#### KakaoWork, Slack
+* Clone this repository.
+  * Save KakaoWork webhook url with `config-KakaoWork.sh <webhook-url>` command.
+  * Save Slack webhook url with `config-Slack.sh <webhook-url>` command.
+
+### Xcode Setting 
 * In Xcode, go to Preferences -> Behaviors. 
   * Under Build -> Start, add `build-start.sh` to Run.
   * Under Build -> Succeeds, add `build-succeeded.sh` to Run.
@@ -35,6 +43,5 @@ My project will helpful. Now you can enjoy your leisure compile time.
 
 #### Clean Removal
 
-* Remove `/usr/local/etc/NotifyBuildResult/` directory.
-* Remove `/usr/local/etc/PushBullet/` directory.
+* Remove `$HOME/.NotifyBuildResult/` directory.
 * Remove cloned repository.

@@ -1,5 +1,5 @@
 #!/bin/bash
-WEBHOOK_URL=$(cat /usr/local/etc/KakaoWork/incoming-webhook-url)
+WEBHOOK_URL=$(cat $HOME/.NotifyBuildResult/KakaoWork/incoming-webhook-url)
 
 curl -X POST "$WEBHOOK_URL" -H "Content-Type: application/json" -d '{
     "text":"'"$1 - $2"'",
@@ -11,7 +11,7 @@ curl -X POST "$WEBHOOK_URL" -H "Content-Type: application/json" -d '{
         },
         {
             "type": "text",
-            "text": "'"작업 소요 시간 👉 *$2*"'",
+            "text": "'"it takes 👉 *$2*"'",
             "markdown": true
         }
     ]

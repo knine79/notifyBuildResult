@@ -1,3 +1,3 @@
 #!/bin/bash
 BASEDIR=$(dirname "$0")
-$BASEDIR/completed.sh "😏 테스트 성공"
+$BASEDIR/completed.sh test "😏 Test succeeded" 1

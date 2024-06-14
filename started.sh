@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(date +%s) > /usr/local/etc/NotifyBuildResult/start-time
+echo $(date +%s) > $HOME/.NotifyBuildResult/$1-start-time

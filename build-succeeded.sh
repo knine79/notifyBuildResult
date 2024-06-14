@@ -1,3 +1,3 @@
 #!/bin/bash
 BASEDIR=$(dirname "$0")
-$BASEDIR/completed.sh "👍 빌드 성공"
+$BASEDIR/completed.sh build "👍 Build succeeded" 1

@@ -1,5 +1,5 @@
 #!/bin/bash
-ACCESS_TOKEN=$(cat /usr/local/etc/PushBulllet/access-token)
+ACCESS_TOKEN=$(cat $HOME/.NotifyBuildResult/PushBulllet/access-token)
 
 curl --header "Access-Token: $ACCESS_TOKEN" \
     --header 'Content-Type: application/json' \
